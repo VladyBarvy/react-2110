@@ -1,0 +1,29 @@
+.container {
+  border: 1px solid #ccc; /* Устанавливаем рамку толщиной 1 пиксель и цветом #ccc */
+}
+
+.form-input {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.leftColumn {
+  flex: 1;
+  margin-right: 16px;
+}
+.rightColumn {
+  flex: 2;
+}
+
+.taskCard {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 16px auto;
+}

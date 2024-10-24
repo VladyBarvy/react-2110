@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  border: 1px solid #ccc; /* Устанавливаем рамку толщиной 1 пиксель и цветом #ccc */
+}
+
+.form-design {
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+}
