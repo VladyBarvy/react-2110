@@ -24,55 +24,68 @@ const Form_todolist = ({ addTodo }) => {
 
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-
-      <div className="form-input-case">
-        <input
-          type="text"
-          className="form-input"
-          placeholder="Тема"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </div>
 
 
-      <div className="form-input-case">
-
-        <input
-          type="text"
-          className="form-input"
-          placeholder="Задача"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-      </div>
+      <form className="form" onSubmit={handleSubmit}>
 
 
-      <div className="form-input-case">
-        {/* <input
-          type="date"
-          className="form-input"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        /> */}
-
-        <input
-          type="datetime-local"
-          className="form-input"
-          value={dateTime}
-          onChange={(e) => setDateTime(e.target.value)}
-        />
-      </div>
+        <div className="form-input-case">
+          <input
+            type="text"
+            className="form-input"
+            placeholder="Тема"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
 
 
-      <button type="submit">Добавить</button>
+        <div className="form-input-case">
+          <input
+            type="text"
+            className="form-input"
+            placeholder="Задача"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
 
 
+        <div className="form-input-case">
+          <input
+            type="datetime-local"
+            className="form-input"
+            value={dateTime}
+            onChange={(e) => setDateTime(e.target.value)}
+          />
+        </div>
 
 
-    </form>
+        <button type="submit">Добавить</button>
+      </form>
+ 
+
   );
 };
 
 export default Form_todolist;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         {/* <input
+//   type="date"
+//   className="form-input"
+//   value={date}
+//   onChange={(e) => setDate(e.target.value)}
+// /> */}

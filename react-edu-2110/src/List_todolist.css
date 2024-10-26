@@ -27,3 +27,167 @@
   max-width: 400px;
   margin: 16px auto;
 }
+
+
+
+
+
+
+.task-card {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+}
+
+.task-info {
+  max-width: 180px;
+}
+
+.task-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.task-desc {
+  margin-bottom: 10px;
+}
+
+.deadline {
+  color: #555;
+  font-size: 14px;
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.ok-btn, .del-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ddd;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ok-btn:hover, .del-btn:hover {
+  background-color: #bbb;
+}
+
+
+
+
+
+
+.trash-button {
+  width: 40px; 
+  height: 40px;
+  font-size: 30px;
+  /* border-radius: 50%; 
+  background-color: white;
+  border: 1px solid rgb(146, 144, 144); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer; 
+  transition: background-color 0.5s; */
+  cursor: pointer; /* Изменяем курсор на указатель */
+  transition: background-color 0.5s; /* Плавный переход для фона */
+}
+
+.trash-button:hover {
+  opacity: 0.8;
+  background-color: #bbb;
+}
+
+
+
+.circle-button {
+  width: 40px; /* Ширина кнопки */
+  height: 40px; /* Высота кнопки */
+  font-size: 30px; 
+  /* border-radius: 50%;
+  background-color: white; 
+  border: 1px solid rgb(146, 144, 144);  */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+
+
+.circle-button:hover {
+  opacity: 0.8;
+}
+
+
+.checkmark {
+  color: rgb(240, 22, 22); 
+
+  transition: color 0.8s; 
+}
+
+/* .circle-button.active .checkmark {
+  color: green;
+} */
+
+
+
+.checkmark.white {
+  color: rgb(240, 22, 22); 
+}
+
+.checkmark.green {
+  color: rgb(0, 4, 128); 
+}
+
+
+
+
+/* .circle-button {
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  background-color: white; 
+  border: 2px solid black; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.checkmark {
+  font-size: 30px; 
+  transition: color 0.3s; 
+}
+
+
+
+
+.circle-button.active {
+  background-color: #e0ffe0;
+} */
+
+
+
+
+
+
+
+
+
+
+

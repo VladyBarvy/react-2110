@@ -12,6 +12,8 @@ import Navbar from './Navbar.jsx';
 import Form_todolist from './Form_todolist.jsx';
 import List_todolist from './List_todolist.jsx';
 
+import ToDoNext from './ToDoNext.jsx';
+import SliderDog from './SliderDog.jsx';
 
 
 
@@ -50,14 +52,30 @@ function App() {
 
 
 
-      <div className="form-design">
+
+      <div>
+        <SliderDog />
+      </div>
+
+
+      <div className="global-card">
         <h1>Let's do business!</h1>
         <Form_todolist addTodo={addTodo} />
-        <div className="container">
+        <div>
           <List_todolist todos={todos} removeTodo={removeTodo} />
         </div>
-
       </div>
+
+
+      {/* <div>
+        <ToDoNext />
+      </div> */}
+
+
+
+
+
+
 
 
     </>

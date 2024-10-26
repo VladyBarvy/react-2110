@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #000000; /* Устанавливаем рамку толщиной 1 пиксель и цветом #ccc */
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
 }
 
 .form-input-case {
@@ -17,3 +23,16 @@
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
+
+
+/*
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+  align-items: center;
+*/

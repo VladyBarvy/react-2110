@@ -65,13 +65,14 @@ import { uniqueId } from 'lodash';
 const List_todolist = ({ todos, removeTodo }) => {
   const [isCompleted, setIsCompleted] = useState(false);
 
-  const modi = (info) => {
-   
-    return console.log(info);
+
+  const toggleCheck = () => {
+    setIsCompleted(!isCompleted);
   };
 
-
-
+  // Присваиваем кодировки переменным
+  const checkmark = '✔ '; // Кодировка для галочки
+  const crossmark = '✔ '; // Кодировка для перекрестной галочки
 
   return (
     <ul>
@@ -79,7 +80,7 @@ const List_todolist = ({ todos, removeTodo }) => {
         <div >
           <li key={index}>
 
-            <div className="taskCard">
+            {/* <div className="taskCard">
               <div className="leftColumn">
                 <div>
                   <h3>{todo.title}</h3>
@@ -88,7 +89,6 @@ const List_todolist = ({ todos, removeTodo }) => {
                   <p>{todo.text}</p>
                 </div>
                 <div>
-                  {/* <p>{todo.dateTime}</p> */}
                   <p>{modi(todo.dateTime)}</p>
                 </div>
               </div>
@@ -101,6 +101,48 @@ const List_todolist = ({ todos, removeTodo }) => {
                   <button onClick={() => removeTodo(index)}>🗑️</button>
                 </div>
               </div>
+            </div> */}
+
+
+
+            <div class="task-card">
+
+              <div class="task-info">
+                <p class="task-title">{todo.title}</p>
+                <p class="task-desc">{todo.text}</p>
+                <p class="deadline">{todo.dateTime}</p>
+              </div>
+
+
+
+              <div class="task-actions">
+
+                {/* <button className="circle-button" onClick={toggleCheck}>
+                  {isCompleted && <span className="checkmark">✔️</span>}
+                </button> */}
+
+                {/* <button onClick={toggleCheck}>
+                  {isCompleted && <span className={`checkmark ${isCompleted ? 'green' : 'white'}`}> &#10004; </span>}
+                </button> */}
+
+                <button className="circle-button" onClick={toggleCheck}>
+                  <span className={`checkmark ${isCompleted ? 'green' : 'gray'}`}>
+                    {isCompleted ? '✔ ' : '✔ '}
+                  </span>
+                </button>
+
+
+
+
+
+
+                <button>
+                  <span className="trash-button" onClick={() => removeTodo(index)}>🗑️</span>
+                </button>
+
+
+              </div>
+
             </div>
 
           </li>
@@ -115,6 +157,38 @@ const List_todolist = ({ todos, removeTodo }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// https://htmlweb.ru/html/symbols.php?ysclid=m2qhxynm4y418132228
+// ✔️
+
+
+/*
+
+            <div class="task-card">
+              <div class="task-info">
+                <p class="task-title">Task 1</p>
+                <p class="task-desc">Eat breakfast</p>
+                <p class="deadline">Deadline: 12-10-2024 12:00</p>
+              </div>
+              <div class="task-actions">
+                <button class="ok-btn">OK</button>
+                <button class="del-btn">DEL</button>
+              </div>
+            </div>
+
+
+
+                            // <button onClick={() => setIsCompleted(!isCompleted)}>✔️</button>
+            */
 
 
 
