@@ -53,12 +53,16 @@ function App() {
 
 
 
+
       <div>
         <SliderDog />
       </div>
 
 
       <div className="global-card">
+
+
+
         <h1>Let's do business!</h1>
         <Form_todolist addTodo={addTodo} />
         <div>

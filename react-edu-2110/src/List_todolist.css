@@ -90,9 +90,12 @@
 
 
 .trash-button {
-  width: 40px; 
-  height: 40px;
-  font-size: 30px;
+  width: 50px; 
+  height: 50px;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center; 
+  display: flex; 
   /* border-radius: 50%; 
   background-color: white;
   border: 1px solid rgb(146, 144, 144); 
@@ -103,41 +106,47 @@
   transition: background-color 0.5s; */
   cursor: pointer; /* Изменяем курсор на указатель */
   transition: background-color 0.5s; /* Плавный переход для фона */
+  margin: 5px;
 }
 
 .trash-button:hover {
   opacity: 0.8;
-  background-color: #bbb;
+  background-color: #d2d2d2;
 }
 
 
 
 .circle-button {
-  width: 40px; /* Ширина кнопки */
-  height: 40px; /* Высота кнопки */
-  font-size: 30px; 
+  width: 50px; /* Ширина кнопки */
+  height: 50px; /* Высота кнопки */
+  font-size: 35px; 
+  justify-content: center;
+  align-items: center; 
+  display: flex; 
   /* border-radius: 50%;
   background-color: white; 
   border: 1px solid rgb(146, 144, 144);  */
   /* display: flex;
-  justify-content: center;
+  
   align-items: center; */
   cursor: pointer;
   transition: background-color 0.5s;
+  margin: 5px;
 }
 
 
 
 .circle-button:hover {
   opacity: 0.8;
+  background-color: #d2d2d2;
 }
 
 
-.checkmark {
+/* .checkmark {
   color: rgb(240, 22, 22); 
 
   transition: color 0.8s; 
-}
+} */
 
 /* .circle-button.active .checkmark {
   color: green;
@@ -146,12 +155,13 @@
 
 
 .checkmark.white {
-  color: rgb(240, 22, 22); 
+  color: rgb(157, 153, 153); 
 }
 
 .checkmark.green {
-  color: rgb(0, 4, 128); 
+  color: green;
 }
+
 
 
 

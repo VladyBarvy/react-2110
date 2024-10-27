@@ -70,10 +70,6 @@ const List_todolist = ({ todos, removeTodo }) => {
     setIsCompleted(!isCompleted);
   };
 
-  // Присваиваем кодировки переменным
-  const checkmark = '✔ '; // Кодировка для галочки
-  const crossmark = '✔ '; // Кодировка для перекрестной галочки
-
   return (
     <ul>
       {todos.map((todo, index) => (
@@ -126,7 +122,7 @@ const List_todolist = ({ todos, removeTodo }) => {
                 </button> */}
 
                 <button className="circle-button" onClick={toggleCheck}>
-                  <span className={`checkmark ${isCompleted ? 'green' : 'gray'}`}>
+                  <span className={`checkmark ${isCompleted ? 'green' : 'white'}`}>
                     {isCompleted ? '✔ ' : '✔ '}
                   </span>
                 </button>
@@ -136,8 +132,8 @@ const List_todolist = ({ todos, removeTodo }) => {
 
 
 
-                <button>
-                  <span className="trash-button" onClick={() => removeTodo(index)}>🗑️</span>
+                <button className="trash-button">
+                  <span onClick={() => removeTodo(index)}>🗑️</span>
                 </button>
 
 
