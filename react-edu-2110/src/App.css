@@ -61,4 +61,5 @@
   border: 1px solid #8d8a8a; /* Устанавливаем рамку толщиной 1 пиксель и цветом #ccc */
   border-radius: 20px;
   padding: 20px;
+  max-width: 500px;
 }

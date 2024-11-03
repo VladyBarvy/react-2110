@@ -197,7 +197,44 @@
 
 
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide-enter {
+  transform: translateY(-30px) scale(0.95);
+  opacity: 0;
+}
+.slide-enter-active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
+}
+.slide-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-exit-active {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
+}
 
 
 

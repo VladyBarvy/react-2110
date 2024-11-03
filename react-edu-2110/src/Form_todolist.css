@@ -1,9 +1,10 @@
 .form {
-  display: flex;
-  flex-direction: column;
+  width: 400 px;
+  /* display: flex;
+  flex-direction: column; */
   align-items: center;
-  border: 1px solid #000000; /* Устанавливаем рамку толщиной 1 пиксель и цветом #ccc */
-  border-radius: 20px;
+  border: 1px solid #000000;
+  border-radius: 16px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
   padding: 20px;
@@ -11,12 +12,14 @@
 }
 
 .form-input-case {
-  width: 100%;
+  /* width: 100%; */
+  width: 400 px;
   margin-bottom: 10px;
 }
 
 .form-input {
-  width: 100%;
+  /* width: 100%; */
+  width: 400 px;
   outline: none;
   padding: 10px;
   border-radius: 5px;
