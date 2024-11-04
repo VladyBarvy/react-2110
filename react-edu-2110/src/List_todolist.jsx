@@ -446,7 +446,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 //     const storedCompletedTasks = localStorage.getItem('completedTasks');
 //     return storedCompletedTasks ? JSON.parse(storedCompletedTasks) : Array(todos.length).fill(false);
 //   });
-  
+
 //   const [filter, setFilter] = useState('all'); // Состояние для фильтрации
 //   const [editingIndex, setEditingIndex] = useState(null); // Индекс редактируемой задачи
 //   const [newTitle, setNewTitle] = useState(''); // Новое название для редактируемой задачи
@@ -578,11 +578,11 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 //     const storedCompletedTasks = localStorage.getItem('completedTasks');
 //     return storedCompletedTasks ? JSON.parse(storedCompletedTasks) : Array(todos.length).fill(false);
 //   });
-  
+
 //   const [filter, setFilter] = useState('all');
 //   const [editingIndex, setEditingIndex] = useState(null);
 //   const [newTitle, setNewTitle] = useState('');
-  
+
 //   const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
 //   const [taskToRemove, setTaskToRemove] = useState(null); // Задача, которую нужно удалить
 
@@ -741,11 +741,11 @@ const List_todolist = ({ todos, removeTodo, updateTodo }) => {
     const storedCompletedTasks = localStorage.getItem('completedTasks');
     return storedCompletedTasks ? JSON.parse(storedCompletedTasks) : Array(todos.length).fill(false);
   });
-  
+
   const [filter, setFilter] = useState('all');
   const [editingIndex, setEditingIndex] = useState(null);
   const [newTitle, setNewTitle] = useState('');
-  
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [taskToRemove, setTaskToRemove] = useState(null);
 
@@ -797,40 +797,55 @@ const List_todolist = ({ todos, removeTodo, updateTodo }) => {
   return (
     <div>
       <div className="filter">
-        <label>
-          <input
-            type="radio"
-            value="all"
-            checked={filter === 'all'}
-            onChange={() => setFilter('all')}
-          />
-          Все
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="completed"
-            checked={filter === 'completed'}
-            onChange={() => setFilter('completed')}
-          />
-          Выполненные
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="incompleted"
-            checked={filter === 'incompleted'}
-            onChange={() => setFilter('incompleted')}
-          />
-          Невыполненные
-        </label>
+
+        <div className="form_radio_group">
+
+          <div className="form_radio_btn">
+            <label>
+              <input
+                type="radio"
+                value="all"
+                checked={filter === 'all'}
+                onChange={() => setFilter('all')}
+              />
+              <span>Все</span>
+            </label>
+          </div>
+
+
+          <div className="form_radio_btn">
+            <label>
+              <input
+                type="radio"
+                value="completed"
+                checked={filter === 'completed'}
+                onChange={() => setFilter('completed')}
+              />
+              <span>Готово</span>
+            </label>
+          </div>
+
+          <div className="form_radio_btn">
+            <label>
+              <input
+                type="radio"
+                value="incompleted"
+                checked={filter === 'incompleted'}
+                onChange={() => setFilter('incompleted')}
+              />
+              <span>В работе</span>
+            </label>
+          </div>
+        </div>
+
+
       </div>
 
       <TransitionGroup>
         {filteredTodos.map((todo, index) => (
           <CSSTransition key={index} timeout={1000} classNames="slide">
             <div>
-              <li>
+              <li className="list-punkt">
                 <div className="task-card">
                   <div className="task-info">
                     {editingIndex === index ? (
@@ -849,12 +864,18 @@ const List_todolist = ({ todos, removeTodo, updateTodo }) => {
                         <p className="task-title">{todo.title}</p>
                         <p className="task-desc">{todo.text}</p>
                         <p className="deadline">{todo.dateTime}</p>
-                        <button onClick={() => handleEdit(index)}>Редактировать</button>
+                        {/* <button onClick={() => handleEdit(index)}>Редактировать</button> */}
+
                       </>
                     )}
                   </div>
 
                   <div className="task-actions">
+
+                    <button className="edit-button" onClick={() => handleEdit(index)}>
+                      ✏️ {/* Картинка карандаша */}
+                    </button>
+
                     <button className="circle-button" onClick={() => toggleCheck(index)}>
                       <span className={`checkmark ${completedTasks[index] ? 'green' : 'white'}`}>
                         {completedTasks[index] ? '✔ ' : '✔ '}

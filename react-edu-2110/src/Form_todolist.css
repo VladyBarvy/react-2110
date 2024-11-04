@@ -1,25 +1,52 @@
 .form {
-  width: 400 px;
-  /* display: flex;
-  flex-direction: column; */
+  /* width: 320 px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   border: 1px solid #000000;
   border-radius: 16px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
   padding: 20px;
-  margin: 20px;
+  margin: 20px; */
+
+
+
+
+  display: flex;                /* Используем flexbox для центрирования */
+  flex-direction: column;       /* Располагаем элементы в столбик */
+  align-items: center;          /* Центрируем элементы по горизонтали */
+  width: 280px;                 /* Фиксированная ширина контейнера */
+  height: 228px;                /* Фиксированная высота контейнера (по желанию) */
+  margin: 20px;               /* Центрируем контейнер на странице */
+  padding: 20px;                /* Внутренние отступы контейнера */
+  box-sizing: border-box;       /* Учитываем внутренние отступы в размеры */
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 16px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  /* background-color: #fff;
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 360px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px; */
 }
 
 .form-input-case {
-  /* width: 100%; */
-  width: 400 px;
+  width: 100%;
+  /* width: 400 px; */
   margin-bottom: 10px;
 }
 
 .form-input {
-  /* width: 100%; */
-  width: 400 px;
+  width: 100%;
+  /* width: 400 px; */
   outline: none;
   padding: 10px;
   border-radius: 5px;

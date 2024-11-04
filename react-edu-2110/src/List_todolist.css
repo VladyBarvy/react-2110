@@ -3,7 +3,7 @@
 }
 
 .form-input {
-  width: 100%;
+  /* width: 100%; */
   outline: none;
   padding: 10px;
   border-radius: 5px;
@@ -24,7 +24,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  max-width: 400px;
+  max-width: 360px;
   margin: 16px auto;
 }
 
@@ -38,7 +38,7 @@
   border: 1px solid black;
   border-radius: 15px;
   padding: 20px;
-  width: 300px;
+  max-width: 360px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -54,6 +54,18 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .task-desc {
   margin-bottom: 10px;
@@ -82,6 +94,37 @@
 
 .ok-btn:hover, .del-btn:hover {
   background-color: #bbb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.edit-button {
+  width: 86px; 
+  height: 50px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center; 
+  display: flex; 
+  cursor: pointer; /* Изменяем курсор на указатель */
+  transition: background-color 0.5s; /* Плавный переход для фона */
+  margin: 5px;
+}
+
+.edit-button:hover {
+  opacity: 0.8;
+  background-color: #d2d2d2;
 }
 
 
@@ -193,6 +236,106 @@
 
 
 
+.filter {
+  /* padding: 10px;
+  border-radius: 16px;
+  border: 1px solid #ccc; */
+ 
+
+
+
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 360px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 16px;
+
+
+  
+  flex-direction: column;       /* Располагаем кнопки в столбик */
+  
+}
+
+
+.form_radio_group {
+  display: inline-block;
+
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form_radio_btn {
+	display: inline-block;
+
+	float: left;  
+}
+
+
+
+
+
+
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+}
+
+/* Checked */
+/* .form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+} */
+
+
+
+
+
+
+/* Hover */
+.form_radio_btn label:hover {
+	color: #666;
+}
+
+
+
+
+
+.form_radio_btn input[type="radio"]:checked + span {
+  color: #ff0000; /* Цвет текста при выборе */
+  font-weight: bold;
+}
+
+
+
+
+.form_radio_btn input[type="radio"]:checked {
+  /* Добавляем стили для отмеченной радиокнопки */
+  background-color: #336162; /* Меняем цвет фона на зелёный при выборе */
+}
 
 
 
@@ -238,3 +381,6 @@
 
 
 
+.list-punkt {
+  list-style-type: none;
+}

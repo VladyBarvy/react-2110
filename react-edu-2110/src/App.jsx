@@ -239,7 +239,9 @@ function App() {
 
 
       <div className="global-card">
-        <h1>-- Task lisT --</h1>
+        <div className="head_title_name">
+          <h1 class="change-text">Task lisT</h1>
+        </div>
         {/* <Form_todolist addTodo={addTodo} /> */}
         <Form_todolist todos={todos} setTodos={setTodos} />
         <div>
