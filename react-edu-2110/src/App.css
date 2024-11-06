@@ -57,13 +57,58 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Новый эффект для box-shadow */
+@keyframes shadow-glow {
+  0% {
+    box-shadow: 0 0 15px 3px rgba(22, 150, 255, 0.5); /* Исходная тень */
+  }
+  25% {
+    box-shadow: 5px 5px 30px 10px rgba(22, 150, 255, 0.7); /* Увеличиваем тень */
+  }
+  50% {
+    box-shadow: 0 0 50px 15px rgba(22, 150, 255, 0.9); /* Еще более яркая тень */
+  }
+  75% {
+    box-shadow: -5px -5px 30px 10px rgba(22, 150, 255, 0.7); /* Тень в другую сторону */
+  }
+  100% {
+    box-shadow: 0 0 15px 3px rgba(22, 150, 255, 0.5); /* Возвращаем к исходной тени */
+  }
+}
+
+
+
+
+
+
+
 .global-card {
   border: 1px solid #8d8a8a; /* Устанавливаем рамку толщиной 1 пиксель и цветом #ccc */
   border-radius: 20px;
   padding: 20px;
   max-width: 320px;
   box-shadow: 0 0 10px 5px #1696ff;
+ 
 }
+
+
+
+
+
+
 
 
 
@@ -123,4 +168,55 @@ h1.change-text{
 h1.change-text:hover{
   color: #f652e8; /* Меняем цвет текста */
   transform: scale(1.2); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Общие стили для приложения */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.theme-toggle-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Светлая тема */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app-container.light {
+  background-color: #f0f0f0;
+}
+
+/* Темная тема */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app-container.dark {
+  background-color: #333333;
 }
