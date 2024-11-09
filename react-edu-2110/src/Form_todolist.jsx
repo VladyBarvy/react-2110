@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Form_todolist.css'
+import { Timer } from './SelfEduOne.jsx';
 
 const Form_todolist = ({ todos, setTodos }) => {
   const [text, setText] = useState('');
@@ -25,6 +26,11 @@ const Form_todolist = ({ todos, setTodos }) => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      
+      {/* <div>
+        <Timer />
+      </div> */}
+      
       <div className="form-input-case">
         <input
           type="text"

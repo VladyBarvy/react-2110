@@ -15,6 +15,8 @@ import List_todolist from './List_todolist.jsx';
 import ToDoNext from './ToDoNext.jsx';
 import SliderDog from './SliderDog.jsx';
 
+import CircleAnimation from './CircleAnimation.jsx';
+import BtnGroup from './SelfEduOne.jsx';
 
 
 // Компонент для переключения темы
@@ -125,6 +127,9 @@ function App() {
           <List_todolist todos={todos} removeTodo={removeTodo} updateTodo={updateTodo} />
         </div>
       </div>
+
+
+
     </>
   )
 }
@@ -160,9 +165,11 @@ export default App
 */
 
 
-
-
-
+/*
+<div>
+<CircleAnimation />
+</div>
+*/
 
 
 
